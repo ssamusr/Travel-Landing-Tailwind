@@ -2,3 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
+.Card{
+    @apply w-48 h-64 shadow-lg rounded-lg flex-none my-2 transform transition-all hover:-translate-y-2 hover:shadow-xl;
+}
+
+.Card-img {
+    @apply w-full h-3/5 rounded-t-lg bg-cover;
+}
+
+.Card-text-container {
+    @apply w-full h-2/5 rounded-b-lg flex flex-col justify-center gap-2 p-4;
+}
+
+.Card-tittle {
+    @apply font-bold text-xl;
+}
+
+.Card-text {
+    @apply text-sm;
+}

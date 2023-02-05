@@ -10,20 +10,20 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"   rel="stylesheet">
     <title>Travel Landing</title>
   </head>
-  <body>
+  <body class="font-Montserrat">
     <nav></nav>
     <div id="tab_bar"></div>
     <section class="w-full h-screen">
 
-      <div id="home" class="w-full h-3/4">
+      <div id="home" class="w-full pb-5">
         <div class="w-full h-full flex flex-col absolute space-y-80 items-center">
           <div class="flex items-center mt-14">
             <span class="absolute left-16">
               <img src="./public/icons/Shape.svg" alt="search-icon">
             </span>
-            <input type="search" placeholder="San Francisco" class="w-72 font-Montserrat text-center p-4 rounded-full shadow-sm outline-none">
+            <input type="search" placeholder="San Francisco" class="w-72 font-Montserrat text-center p-4 rounded-full shadow-sm outline-none transition duration-300 focus-within:shadow-sm focus:ring-2 focus:scale-x-105">
           </div>
-          <button class="w-48 text-primary bg-white font-Montserrat font-semibold p-4 rounded-full shadow-sm">
+          <button class="w-48 text-primary bg-white font-Montserrat font-semibold p-4 rounded-full shadow-sm transition-all duration-500 ease-in-out hover:bg-primary hover:text-white transform hover:-translate-y-1 hover:scale-110">
             Explore More
           </button>
         </div>
@@ -32,9 +32,55 @@
         </div>
       </div>
 
+      <div id="recomendations" class="p-6">
+        <h2 class="text-3xl font-semibold text-primary mb-5">Our Recomendations</h2>
 
-      <div id="recomendadas"></div>
-      <div id="rentas_destacadas"></div>
+        <div class="w-auto flex gap-x-5 overflow-x-auto overscroll-x-contain">
+          <div class="Card">
+            <div class="Card-img bg-norway"></div>
+            <div class="Card-text-container bg-secondary">
+              <p class="Card-tittle text-white">Norway</p>
+              <p class="Card-text text-white">Beautiful landscapes</p>
+            </div>
+          </div>
+
+          <div class="Card">
+            <div class="Card-img bg-new_york"></div>
+            <div class="Card-text-container bg-white">
+              <p class="Card-tittle text-terciary">New York</p>
+              <p class="Card-text text-terciary">Concrete jungle</p>
+            </div>
+          </div>
+
+          <div class="Card">
+            <div class="Card-img bg-yosemite"></div>
+            <div class="Card-text-container bg-secondary">
+              <p class="Card-tittle text-white">Yosemite</p>
+              <p class="Card-text text-white">A break from the world</p>
+            </div>
+          </div>
+
+          <div class="Card">
+            <div class="Card-img bg-seattle"></div>
+            <div class="Card-text-container bg-white">
+              <p class="Card-tittle text-terciary">Seattle</p>
+              <p class="Card-text text-terciary">Big City</p>
+            </div>
+          </div>
+
+          <div class="Card">
+            <div class="Card-img bg-switzerland"></div>
+            <div class="Card-text-container bg-secondary">
+              <p class="Card-tittle">Switzerland</p>
+              <p class="Card-text">Big City</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="rentas_destacadas">
+        <div class="w-60 h-60"></div>
+      </div>
     </section>
     <footer></footer>
   </body>
