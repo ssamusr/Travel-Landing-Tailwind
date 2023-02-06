@@ -14,10 +14,22 @@
     @apply w-full h-2/5 rounded-b-lg flex flex-col justify-center gap-2 p-4;
 }
 
-.Card-tittle {
+.Card-title {
     @apply font-bold text-xl;
 }
 
 .Card-text {
     @apply text-sm;
+}
+
+.Card-stays {
+    @apply w-full h-96 bg-cover bg-no-repeat rounded-xl;
+}
+
+.Card-stays-title {
+    @apply text-3xl font-bold px-6 pt-12 pb-3 text-white;
+}
+
+.Card-stays-text {
+    @apply w-64 text-base px-6 text-white;
 }
