@@ -15,19 +15,22 @@
     <section class="w-full h-screen">
 
       <div id="home" class="w-full pb-5">
-        <div class="w-full h-full flex flex-col absolute space-y-80 items-center">
-          <div class="flex items-center mt-14">
-            <span class="absolute left-16">
+        <div class="w-full h-full flex flex-col absolute space-y-80 items-center lg:space-y-0 lg:items-start lg:pt-24 lg:justify-start">
+          <div class="relative flex items-center mt-14">
+            <span class="relative left-10 lg:hidden">
               <img src="./public/icons/Shape.svg" alt="search-icon">
             </span>
-            <input id="search" type="search" placeholder="San Francisco" class="w-72 font-Montserrat text-center p-4 rounded-full shadow-sm outline-none transition duration-300 focus-within:shadow-sm focus:ring-2 focus:scale-x-105">
+            <input id="search" type="search" placeholder="San Francisco" class="w-72 font-Montserrat text-center p-4 rounded-full shadow-sm outline-none transition duration-300 focus-within:shadow-sm focus:ring-2 focus:scale-x-105 lg:hidden">
           </div>
-          <button class="w-48 text-primary bg-white font-Montserrat font-semibold p-4 rounded-full shadow-sm transition-all duration-500 ease-in-out hover:bg-primary hover:text-white transform hover:-translate-y-1 hover:scale-110">
+          <div class="hidden h-auto lg:w-2/5 lg:flex pb-6">
+            <p class="text-4xl text-white ml-16 font-bold">Find More Locations like this</p>
+          </div>
+          <button class="w-48 text-primary bg-white font-Montserrat font-semibold p-4 rounded-full shadow-sm transition-all duration-500 ease-in-out hover:bg-primary hover:text-white transform hover:-translate-y-1 hover:scale-110 lg:ml-16">
             Explore More
           </button>
         </div>
-        <div class="w-full h-full">
-          <img src="./public/img/sanFrancisco.jpg" alt="">
+        <div class="w-full h-full lg:h-96 lg:bg-sanFranciscoDesktop lg:bg-cover lg:bg-center">
+          <img class="lg:hidden" src="./public/img/sanFrancisco.jpg" alt="">
         </div>
       </div>
 
@@ -80,25 +83,34 @@
       <div id="trending-stays" class="w-full h-auto p-6">
         <p class="text-3xl font-semibold text-primary mb-5">Trending Stays</p>
 
-        <div class="flex flex-col gap-10">
-          <div class="Card-stays bg-chicago bg-right">
-            <p class="Card-stays-title">Chicago</p>
-            <p class="Card-stays-text">2 rooms, bathroom and kitchen.</p>
+        <div class="flex flex-col justify-center items-center gap-10">
+          <div class="Card-stays bg-chicago bg-right lg:h-[38rem] lg:text-right lg:bg-center">
+            <p class="Card-stays-title lg:text-5xl lg:pt-14 lg:px-20">Chicago</p>
+            <p class="Card-stays-text lg:w-auto lg:text-3xl lg:px-20">2 rooms, bathroom and kitchen</p>
           </div>
-  
-          <div class="Card-stays bg-LA">
-            <p class="Card-stays-title">Los Angeles</p>
-            <p class="Card-stays-text">4 rooms, 3 bathrooms, kitchen and private pool.</p>
-          </div>
-  
-          <div class="Card-stays bg-miami">
-            <p class="Card-stays-title">Miami</p>
-            <p class="Card-stays-text">4 rooms, 2 bathrooms, kitchen and amazing sea view.</p>
-          </div>
-          
-          <div class="Card-stays bg-bali">
-            <p class="Card-stays-title">Bali</p>
-            <p class="Card-stays-text">2 rooms, 2 bathrooms, kitchen and private pool.</p>
+
+          <div class="w-full h-auto grid grid-cols-1 lg:grid-cols-5 lg:grid-rows-2 lg:place-items-center lg:place-content-strech gap-4">
+
+            <div class="Card-stays bg-LA lg:row-span-2 lg:col-span-2 lg:h-[49rem] lg:bg-center">
+              <div class="w-full text-right flex flex-col items-end">
+                <p class="Card-stays-title lg:pt-10">Los Angeles</p>
+                <p class="Card-stays-text">4 rooms, 3 bathrooms, kitchen and private pool.</p>
+              </div>
+            </div>
+            
+            <div class="Card-stays bg-miami lg:row-span-1 lg:col-span-3 lg:bg-center">
+              <div class="w-full text-right flex flex-col items-end">
+                <p class="Card-stays-title lg:pt-10">Miami</p>
+                <p class="Card-stays-text lg:w-80">4 rooms, 2 bathrooms, kitchen and amazing sea view.</p>
+              </div>
+            </div>
+            
+            <div class="Card-stays bg-bali lg:row-span-1 lg:col-span-3 lg:bg-center items-end">
+              <div class="w-full text-right flex flex-col items-end">
+                <p class="Card-stays-title lg:pt-24">Bali</p>
+                <p class="Card-stays-text">2 rooms, 2 bathrooms, kitchen and private pool.</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -128,7 +140,7 @@
             </div>
           </div>
         </div>     
-        <footer class="w-full h-auto bg-gray-50 p-6 pb-16">
+        <footer class="w-full h-auto p-6 pb-16">
           <p class="text-lg mb-3 text-gray-300">About Us</p>
           <p class="text-sm mb-1 text-gray-300">Investors</p>
           <p class="text-sm mb-1 text-gray-300">Jobs</p>
@@ -162,7 +174,7 @@
           </div>
         </footer>
       </section>
-      <div id="tab_bar" class="w-full h-16 bg-white fixed left-0 bottom-0 shadow-md flex gap-10 justify-center items-center">
+      <div id="tab_bar" class="w-full h-16 bg-white fixed left-0 bottom-0 shadow-md flex gap-10 justify-center items-center lg:hidden">
         <a href="#home">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8">
             <path class="fill-current text-gray-200 hover:text-primary" stroke-linecap="round" stroke-linejoin="round" d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
