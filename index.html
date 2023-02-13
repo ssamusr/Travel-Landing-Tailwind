@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en" class="scroll-smooth dark">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
@@ -10,8 +10,35 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"   rel="stylesheet">
     <title>Travel Landing</title>
   </head>
-  <body class="font-Montserrat">
-    <nav></nav>
+  <body class="font-Montserrat dark:bg-gray-900">
+    <nav class="w-full h-14 hidden bg-white lg:flex justify-between items-center p-4 fixed z-10 dark:bg-gray-900">
+      <div class="h-auto w-auto">
+        <p class="text-xl text-primary font-black dark:text-white" >Platzi Travel</p>
+      </div>
+      <div class="text-lg text-primary font-bold space-x-8 dark:text-white">
+        <a href="">Locations</a>
+        <a href="">Stays</a>
+        <a href="">FAQS</a>
+        <a href="">About Us</a>
+      </div>
+      <div class="flex gap-4 items-center">
+        <a href="#">
+          <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path class="" fill-rule="evenodd" clip-rule="evenodd" d="M9.08333 0.625C4.41192 0.625 0.625 4.41192 0.625 9.08333C0.625 13.7547 4.41192 17.5417 9.08333 17.5417C10.9832 17.5417 12.7368 16.9153 14.1489 15.8577L19.104 20.8128C19.5759 21.2847 20.341 21.2847 20.8128 20.8128C21.2847 20.341 21.2847 19.5759 20.8128 19.104L15.8577 14.1489C16.9153 12.7368 17.5417 10.9832 17.5417 9.08333C17.5417 4.41192 13.7547 0.625 9.08333 0.625ZM3.04167 9.08333C3.04167 5.74661 5.74661 3.04167 9.08333 3.04167C12.4201 3.04167 15.125 5.74661 15.125 9.08333C15.125 12.4201 12.4201 15.125 9.08333 15.125C5.74661 15.125 3.04167 12.4201 3.04167 9.08333Z" fill="#CC2D4A"/>
+            </svg>
+        </a>
+        <a href="#"  id="toggle">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M23.0748 16.2748C20.9267 17.2465 18.5334 17.5405 16.214 17.1177C13.8945 16.6949 11.7589 15.5753 10.0918 13.9082C8.42464 12.241 7.30509 10.1055 6.88228 7.78601C6.45946 5.46654 6.75347 3.0733 7.72512 0.92514C6.01494 1.69801 4.51777 2.87422 3.36208 4.35288C2.20638 5.83154 1.42666 7.56849 1.08979 9.41473C0.752928 11.261 0.868984 13.1614 1.428 14.9529C1.98702 16.7444 2.97232 18.3736 4.29935 19.7006C5.62639 21.0276 7.25556 22.0129 9.04708 22.572C10.8386 23.131 12.739 23.247 14.5852 22.9102C16.4315 22.5733 18.1684 21.7936 19.6471 20.6379C21.1257 19.4822 22.302 17.985 23.0748 16.2748Z" fill="#CC2D4A"/>
+            </svg>
+        </a>
+        <a href="#">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8">
+            <path class="fill-current text-gray-200 hover:text-primary" stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
+          </svg>
+        </a>
+      </div>
+    </nav>
     <section class="w-full h-screen">
 
       <div id="home" class="w-full pb-5">
@@ -23,24 +50,24 @@
             <input id="search" type="search" placeholder="San Francisco" class="w-72 font-Montserrat text-center p-4 rounded-full shadow-sm outline-none transition duration-300 focus-within:shadow-sm focus:ring-2 focus:scale-x-105 lg:hidden">
           </div>
           <div class="hidden h-auto lg:w-2/5 lg:flex pb-6">
-            <p class="text-4xl text-white ml-16 font-bold">Find More Locations like this</p>
+            <p class="text-4xl text-white ml-16 font-bold dark:text-black">Find More Locations like this</p>
           </div>
-          <button class="w-48 text-primary bg-white font-Montserrat font-semibold p-4 rounded-full shadow-sm transition-all duration-500 ease-in-out hover:bg-primary hover:text-white transform hover:-translate-y-1 hover:scale-110 lg:ml-16">
+          <button class="w-48 text-primary bg-white font-Montserrat font-semibold p-4 rounded-full shadow-sm transition-all duration-500 ease-in-out hover:bg-primary hover:text-white transform hover:-translate-y-1 hover:scale-110 lg:ml-16 dark:text-black">
             Explore More
           </button>
         </div>
-        <div class="w-full h-full lg:h-96 lg:bg-sanFranciscoDesktop lg:bg-cover lg:bg-center">
+        <div class="w-full h-full lg:h-[32rem] lg:bg-sanFranciscoDesktop lg:bg-cover lg:bg-center">
           <img class="lg:hidden" src="./public/img/sanFrancisco.jpg" alt="">
         </div>
       </div>
 
       <div id="recomendations" class="p-6">
-        <h2 class="text-3xl font-semibold text-primary mb-5">Our Recomendations</h2>
+        <h2 class="text-3xl font-semibold text-primary mb-5 dark:text-white">Our Recomendations</h2>
 
         <div class="w-auto flex gap-x-5 overflow-x-auto overscroll-x-contain">
           <div class="Card">
             <div class="Card-img bg-norway"></div>
-            <div class="Card-text-container bg-secondary">
+            <div class="Card-text-container bg-secondary dark:bg-gray-700">
               <p class="Card-title text-white">Norway</p>
               <p class="Card-text text-white">Beautiful landscapes</p>
             </div>
@@ -48,15 +75,15 @@
 
           <div class="Card">
             <div class="Card-img bg-new_york"></div>
-            <div class="Card-text-container bg-white">
-              <p class="Card-title text-terciary">New York</p>
-              <p class="Card-text text-terciary">Concrete jungle</p>
+            <div class="Card-text-container bg-white dark:bg-gray-800">
+              <p class="Card-title text-terciary dark:text-white">New York</p>
+              <p class="Card-text text-terciary dark:text-white">Concrete jungle</p>
             </div>
           </div>
 
           <div class="Card">
             <div class="Card-img bg-yosemite"></div>
-            <div class="Card-text-container bg-secondary">
+            <div class="Card-text-container bg-secondary dark:bg-gray-700">
               <p class="Card-title text-white">Yosemite</p>
               <p class="Card-text text-white">A break from the world</p>
             </div>
@@ -64,15 +91,15 @@
 
           <div class="Card">
             <div class="Card-img bg-seattle"></div>
-            <div class="Card-text-container bg-white">
-              <p class="Card-title text-terciary">Seattle</p>
-              <p class="Card-text text-terciary">Big City</p>
+            <div class="Card-text-container bg-white dark:bg-gray-800">
+              <p class="Card-title text-terciary dark:text-white">Seattle</p>
+              <p class="Card-text text-terciary dark:text-white">Big City</p>
             </div>
           </div>
 
           <div class="Card">
             <div class="Card-img bg-switzerland"></div>
-            <div class="Card-text-container bg-secondary">
+            <div class="Card-text-container bg-secondary dark:bg-gray-700">
               <p class="Card-title text-white">Switzerland</p>
               <p class="Card-text text-white">Big City</p>
             </div>
@@ -81,16 +108,15 @@
       </div>
 
       <div id="trending-stays" class="w-full h-auto p-6">
-        <p class="text-3xl font-semibold text-primary mb-5">Trending Stays</p>
+        <p class="text-3xl font-semibold text-primary mb-5 dark:text-white">Trending Stays</p>
 
-        <div class="flex flex-col justify-center items-center gap-10">
+        <div class="flex flex-col justify-center items-center gap-6">
           <div class="Card-stays bg-chicago bg-right lg:h-[38rem] lg:text-right lg:bg-center">
             <p class="Card-stays-title lg:text-5xl lg:pt-14 lg:px-20">Chicago</p>
             <p class="Card-stays-text lg:w-auto lg:text-3xl lg:px-20">2 rooms, bathroom and kitchen</p>
           </div>
 
-          <div class="w-full h-auto grid grid-cols-1 lg:grid-cols-5 lg:grid-rows-2 lg:place-items-center lg:place-content-strech gap-4">
-
+          <div class="w-full h-auto grid grid-cols-1 lg:grid-cols-5 lg:grid-rows-2 lg:place-items-center lg:place-content-strech gap-6">
             <div class="Card-stays bg-LA lg:row-span-2 lg:col-span-2 lg:h-[49rem] lg:bg-center">
               <div class="w-full text-right flex flex-col items-end">
                 <p class="Card-stays-title lg:pt-10">Los Angeles</p>
@@ -116,27 +142,27 @@
       </div>
         
         <div id="faqs" class="w-full h-auto p-6">
-          <p class="text-3xl font-bold text-primary mb-5">FAQs</p>
+          <p class="text-3xl font-bold text-primary mb-5 dark:text-white">FAQs</p>
           <div class="flex flex-col gap-4">
             <div>
-              <p class="text-base font-semibold text-primary mb-1">Payment Methods</p>
-              <p class="text-sm">We accept VISA, MasterCard, American Express, Paypal and Binance</p>
+              <p class="text-base font-semibold text-primary mb-1 dark:text-white">Payment Methods</p>
+              <p class="text-sm dark:text-white">We accept VISA, MasterCard, American Express, Paypal and Binance</p>
             </div>
             <div>
-              <p class="text-base font-semibold text-primary mb-1">Cancellation Policy</p>
-              <p class="text-sm">For stays of less than a week it is important to notify 3 days in advance, otherwise it will be penalized</p>
+              <p class="text-base font-semibold text-primary mb-1 dark:text-white">Cancellation Policy</p>
+              <p class="text-sm dark:text-white">For stays of less than a week it is important to notify 3 days in advance, otherwise it will be penalized</p>
             </div>
             <div>
-              <p class="text-base font-semibold text-primary mb-1">Pets</p>
-              <p class="text-sm">Pets will depend directly on the host</p>
+              <p class="text-base font-semibold text-primary mb-1 dark:text-white">Pets</p>
+              <p class="text-sm dark:text-white">Pets will depend directly on the host</p>
             </div>
             <div>
-              <p class="text-base font-semibold text-primary mb-1">Safety Information</p>
-              <p class="text-sm">All our stays have accident insurance in case of accidents</p>
+              <p class="text-base font-semibold text-primary mb-1 dark:text-white">Safety Information</p>
+              <p class="text-sm dark:text-white">All our stays have accident insurance in case of accidents</p>
             </div>
             <div>
-              <p class="text-base font-semibold text-primary mb-1">Long Stays</p>
-              <p class="text-sm">We have stays of up to 3 months, in this case an advance payment of 50% of the rental value is required</p>
+              <p class="text-base font-semibold text-primary mb-1 dark:text-white">Long Stays</p>
+              <p class="text-sm dark:text-white">We have stays of up to 3 months, in this case an advance payment of 50% of the rental value is required</p>
             </div>
           </div>
         </div>     
@@ -202,6 +228,18 @@
 
 
       </div>
+      <script>
+        const htmlElemet = document.querySelector("html")
+        const toggleButton = document.querySelector("#toggle")
+        const toggleButtunSm = document.querySelector("#toggle-sm")
 
+        toggleButton.addEventListener("click", toggleDarkMode)
+                
+        function toggleDarkMode() {
+          htmlElemet.classList.contains("dark") 
+          ? htmlElemet.classList.remove("dark")
+          : htmlElemet.classList.add("dark")
+        }
+      </script>
     </body>
 </html>
